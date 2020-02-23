@@ -5,7 +5,7 @@ ZSH_THEME="spaceship"
 ZSH_CUSTOM=$DOTFILES_SHELL/zsh
 
 # Setup Theme
-SPACESHIP_CHAR_SYMBOL="\uf0e7"
+# SPACESHIP_CHAR_SYMBOL="\uf0e7"
 SPACESHIP_CHAR_SUFFIX=" "
 SPACESHIP_PROMPT_FIRST_PREFIX_SHOW="true"
 SPACESHIP_PACKAGE_SHOW="false"
@@ -15,7 +15,7 @@ SPACESHIP_GIT_BRANCH_COLOR="blue"
 source $DOTFILES_SHELL/zsh/functions/*.zsh
 
 # Plugins list
-plugins=(zsh-completions zsh-autosuggestions zsh-better-npm-completion zsh-syntax-highlighting zsh-nvm history-substring-search jsontools sudo urltools web-search git node npm vscode yarn)
+plugins=(zsh-completions zsh-autosuggestions zsh-better-npm-completion zsh-syntax-highlighting zsh-nvm history-substring-search jsontools sudo urltools web-search git node vscode yarn)
 
 # Setup plugin `history-substring-search`
 zmodload zsh/terminfo

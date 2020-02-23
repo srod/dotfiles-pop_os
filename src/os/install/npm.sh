@@ -2,11 +2,6 @@
 
 install_npm_package() {
 
-    # execute \
-    #     ". $HOME/.bash.local \
-    #         && npm install --global --silent $2" \
-    #     "$1"
-
     npm install --global $2
 
 }
@@ -41,6 +36,10 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     install_npm_package "diff-so-fancy" "diff-so-fancy"
+
+    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+    install_npm_package "sass" "sass"
 
 }
 

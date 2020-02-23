@@ -24,7 +24,7 @@ alias aliases="subl $DOTFILES/src/shell/zsh/aliases/aliases.zsh"
 alias poposup="sudo apt update && sudo apt upgrade"
 alias gemup="gem update --system; gem update; gem cleanup"
 alias npmup="npm -g update; npm install -g npm"
-alias update="pacmanup; gemup; npmup"
+alias update="poposup; gemup; npmup"
 
 # Work
 alias work="cd ~/Insync/srodolphe@gmail.com/OneDrive/www"
