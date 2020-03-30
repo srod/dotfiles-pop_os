@@ -21,6 +21,7 @@ sudo sed -i '/Example/d' /etc/clamav/freshclam.conf
 sudo systemctl enable clamav-freshclam.service
 sudo apt install -y ufw gufw
 sudo systemctl enable ufw.service
+sudo snap install authy --classic
 
 # Browsers
 print_in_blue "\n   Packages - Browsers\n\n"
@@ -85,6 +86,12 @@ echo "deb https://deb.etcher.io stable etcher" | sudo tee /etc/apt/sources.list.
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
 sudo apt-get update
 sudo apt-get install -y balena-etcher-electron
+
+# Office
+print_in_blue "\n   Packages - Office\n\n"
+sudo add-apt-repository ppa:libreoffice/ppa
+sudo apt-get update
+sudo apt-get upgrade -y
 
 # Videos
 print_in_blue "\n   Packages - Videos\n\n"
