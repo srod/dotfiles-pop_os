@@ -21,7 +21,7 @@ sudo sed -i '/Example/d' /etc/clamav/freshclam.conf
 sudo systemctl enable clamav-freshclam.service
 sudo apt install -y ufw gufw
 sudo systemctl enable ufw.service
-sudo snap install authy --classic
+sudo snap install authy --beta
 
 # Browsers
 print_in_blue "\n   Packages - Browsers\n\n"
