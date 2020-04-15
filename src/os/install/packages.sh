@@ -8,7 +8,7 @@ sudo apt install -y ngrep
 sudo apt install -y nmap
 sudo apt install -y tcpdump
 sudo apt install -y vim
-sudo apt install -y default-jdk
+sudo apt install -y default-jre
 sudo apt install -y xclip
 sudo apt install -y neofetch
 sudo apt install -y htop
@@ -25,11 +25,10 @@ sudo snap install authy --classic
 
 # Browsers
 print_in_blue "\n   Packages - Browsers\n\n"
-curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
-echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt update
-sudo apt install -y brave-browser
-sudo apt install -y chromium
+sudo apt-get install -y google-chrome-stable
 
 # GPG
 print_in_blue "\n   Packages - GPG\n"
@@ -52,14 +51,13 @@ sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
 sudo apt install -y apt-transport-https
 sudo apt update
-sudo apt install -y code
+sudo apt install -y code-insiders
 rm microsoft.gpg
 
 # Terminal
 print_in_blue "\n   Packages - Terminal\n\n"
 
 # Utilities
-# sudo apt install -y nautilus-dropbox
 sudo add-apt-repository -y ppa:openrazer/stable
 sudo apt-get update
 sudo apt-get install -y openrazer-meta
@@ -91,7 +89,7 @@ sudo apt-get install -y balena-etcher-electron
 print_in_blue "\n   Packages - Office\n\n"
 sudo add-apt-repository ppa:libreoffice/ppa
 sudo apt-get update
-sudo apt-get upgrade -y
+sudo apt-get dist-upgrade -y
 
 # Videos
 print_in_blue "\n   Packages - Videos\n\n"

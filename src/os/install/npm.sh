@@ -30,11 +30,6 @@ main() {
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-    install_npm_package "@vue/cli" "@vue/cli"
-
-
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
     install_npm_package "diff-so-fancy" "diff-so-fancy"
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
