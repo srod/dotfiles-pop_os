@@ -10,7 +10,7 @@ EOF
 declare -r GITHUB_REPOSITORY="srod/dotfiles-pop_os"
 
 declare -r DOTFILES_ORIGIN="https://github.com/$GITHUB_REPOSITORY.git"
-declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/master/src/os/utils.sh"
+declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/rpi/src/os/utils.sh"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
