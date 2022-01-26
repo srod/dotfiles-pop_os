@@ -8,7 +8,7 @@ declare -r NVM_GIT_REPO_URL="https://github.com/creationix/nvm.git"
 install_node() {
 
     nvm install $1
-    npm install npm@6 -g
+    npm install npm@8 -g
 
 }
 
@@ -43,9 +43,7 @@ main() {
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
     [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
 
-    install_node 13
-    install_node 12
-    install_node 10
+    install_node 16
 
     cd $DOTFILES/src/os
 

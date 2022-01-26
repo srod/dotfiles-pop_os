@@ -6,5 +6,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export EDITOR='Code'
-
-export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"

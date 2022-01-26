@@ -3,7 +3,6 @@
 # System
 print_in_blue "\n   Packages - System\n\n"
 sudo apt install -y bat
-sudo apt install -y ncdu
 sudo apt install -y ngrep
 sudo apt install -y nmap
 sudo apt install -y tcpdump
@@ -44,7 +43,6 @@ echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sou
 sudo apt-get update
 sudo apt-get install -y apt-transport-https sublime-text
 
-
 print_in_blue "\n   Package - Visual Studio Code\n\n"
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
@@ -55,17 +53,10 @@ sudo apt install -y code-insiders
 rm microsoft.gpg
 
 # Terminal
-print_in_blue "\n   Packages - Terminal\n\n"
+# print_in_blue "\n   Packages - Terminal\n\n"
 
 # Utilities
-sudo add-apt-repository -y ppa:openrazer/stable
-sudo apt-get update
-sudo apt-get install -y openrazer-meta
-sudo gpasswd -a rodolphe plugdev
-sudo add-apt-repository -y ppa:polychromatic/stable
-sudo apt-get update
-sudo apt-get install -y polychromatic
-sudo snap install simplenote
+sudo snap install standard-notes
 
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ACCAF35C
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys ACCAF35C
@@ -78,12 +69,6 @@ sudo apt-get install -y insync
 sudo apt-get install -y meld
 sudo apt-get install -y unrar
 sudo apt-get install -y pdfarranger
-sudo apt-get install -y youtube-dl
-
-echo "deb https://deb.etcher.io stable etcher" | sudo tee /etc/apt/sources.list.d/balena-etcher.list
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 379CE192D401AB61
-sudo apt-get update
-sudo apt-get install -y balena-etcher-electron
 
 # Office
 print_in_blue "\n   Packages - Office\n\n"
@@ -95,7 +80,6 @@ sudo apt-get dist-upgrade -y
 print_in_blue "\n   Packages - Videos\n\n"
 sudo apt-get install -y vlc
 sudo snap install shotcut --classic
-sudo snap install kdenlive
 
 # Fonts
 print_in_blue "\n   Packages - Fonts\n\n"
