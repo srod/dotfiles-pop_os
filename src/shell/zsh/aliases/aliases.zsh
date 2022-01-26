@@ -14,7 +14,7 @@ alias dotfiles="cd $DOTFILES"
 # Maintenance
 alias pid="ps x | grep -i $1"
 alias grep="grep --color=auto"
-alias aliases="Code $DOTFILES/src/shell/zsh/aliases/aliases.zsh"
+alias aliases="code $DOTFILES/src/shell/zsh/aliases/aliases.zsh"
 
 # Update
 alias poposup="sudo apt update && sudo apt upgrade"
