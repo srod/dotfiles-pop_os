@@ -32,10 +32,6 @@ main() {
 
     install_npm_package "diff-so-fancy" "diff-so-fancy"
 
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    install_npm_package "sass" "sass"
-
 }
 
 main
