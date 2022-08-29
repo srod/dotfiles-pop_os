@@ -10,7 +10,7 @@ EOF
 declare -r GITHUB_REPOSITORY="srod/dotfiles-pop_os"
 
 declare -r DOTFILES_ORIGIN="https://github.com/$GITHUB_REPOSITORY.git"
-declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/rpi/src/os/utils.sh"
+declare -r DOTFILES_UTILS_URL="https://raw.githubusercontent.com/$GITHUB_REPOSITORY/ubuntu/src/os/utils.sh"
 
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
@@ -65,13 +65,13 @@ download_dotfiles() {
 
     if [ ! -d "$DOTFILES" ]; then
         execute \
-            "git clone --branch rpi --quiet --recurse-submodules -j8 $DOTFILES_ORIGIN $DOTFILES" "Cloning in '$DOTFILES'"
+            "git clone --branch ubuntu --quiet --recurse-submodules -j8 $DOTFILES_ORIGIN $DOTFILES" "Cloning in '$DOTFILES'"
     else
         ask_for_confirmation "'$DOTFILES' already exists, do you want to delete it?"
         if answer_is_yes; then
             rm -Rf $DOTFILES
             execute \
-                "git clone --branch rpi --quiet --recurse-submodules -j8 $DOTFILES_ORIGIN $DOTFILES" "Cloning in '$DOTFILES'"
+                "git clone --branch ubuntu --quiet --recurse-submodules -j8 $DOTFILES_ORIGIN $DOTFILES" "Cloning in '$DOTFILES'"
         fi
     fi
 
