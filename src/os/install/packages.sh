@@ -14,6 +14,12 @@ sudo apt install -y htop
 sudo apt install -y snapd
 sudo apt install -y software-properties-gtk
 
+# Fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Meslo.zip
+unzip Meslo.zip -d ~/.fonts
+fc-cache -fv
+rm -f Meslo.zip
+
 # Browsers
 # print_in_blue "\n   Packages - Browsers\n\n"
 # wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
