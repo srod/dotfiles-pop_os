@@ -1,32 +1,32 @@
-[submodule "src/vim/vim/bundle/vim-pathogen"]
-	path = src/vim/vim/bundle/vim-pathogen
-	url = https://github.com/tpope/vim-pathogen.git
-    ignore = dirty
-[submodule "src/shell/oh-my-zsh"]
-	path = src/shell/oh-my-zsh
-	url = https://github.com/robbyrussell/oh-my-zsh.git
-    ignore = dirty
-[submodule "src/shell/zsh/plugins/zsh-autosuggestions"]
-	path = src/shell/zsh/plugins/zsh-autosuggestions
-	url = git://github.com/zsh-users/zsh-autosuggestions
-    ignore = dirty
-[submodule "src/shell/zsh/plugins/zsh-better-npm-completion"]
-	path = src/shell/zsh/plugins/zsh-better-npm-completion
-	url = https://github.com/lukechilds/zsh-better-npm-completion
-    ignore = dirty
-[submodule "src/shell/zsh/plugins/zsh-nvm"]
-	path = src/shell/zsh/plugins/zsh-nvm
-	url = https://github.com/lukechilds/zsh-nvm
-    ignore = dirty
-[submodule "src/shell/zsh/plugins/zsh-syntax-highlighting"]
-	path = src/shell/zsh/plugins/zsh-syntax-highlighting
-	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
-    ignore = dirty
-[submodule "src/shell/zsh/plugins/zsh-completions"]
-	path = src/shell/zsh/plugins/zsh-completions
-	url = https://github.com/zsh-users/zsh-completions
-    ignore = dirty
-[submodule "src/shell/zsh/themes/powerlevel10k"]
-	path = src/shell/zsh/themes/powerlevel10k
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot
+  ignore = dirty
+[submodule "shell/zsh/themes/powerlevel10k"]
+	path = shell/zsh/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
-    ignore = dirty
+  ignore = dirty
+[submodule "shell/zsh/plugins/zsh-autosuggestions"]
+	path = shell/zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions.git
+  ignore = dirty
+[submodule "shell/oh-my-zsh"]
+	path = shell/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+  ignore = dirty
+[submodule "shell/zsh/plugins/zsh-better-npm-completion"]
+	path = shell/zsh/plugins/zsh-better-npm-completion
+	url = https://github.com/lukechilds/zsh-better-npm-completion
+  ignore = dirty
+[submodule "shell/zsh/plugins/zsh-syntax-highlighting"]
+	path = shell/zsh/plugins/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+  ignore = dirty
+[submodule "shell/zsh/plugins/zsh-completions"]
+	path = shell/zsh/plugins/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
+  ignore = dirty
+[submodule "vim/vim/bundle/vim-pathogen"]
+	path = vim/vim/bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen.git
+  ignore = dirty

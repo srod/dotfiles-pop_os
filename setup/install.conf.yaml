@@ -1,0 +1,19 @@
+- defaults:
+    link:
+      force: true
+      relink: true
+      create: true
+
+- clean: ["~"]
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+
+- link:
+    ~/.oh-my-zsh: shell/oh-my-zsh
+    ~/.zshrc: shell/zshrc
+    ~/.p10k.zsh: shell/zsh/p10k.zsh
+    ~/.vimrc: vim/vimrc
+    ~/.vim: vim/vim
+    ~/.gitignore: config/git/ignore
+    ~/.gitconfig: config/git/config

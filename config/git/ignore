@@ -1,0 +1,12 @@
+.DS_Store
+ehthumbs.db
+#Icon?
+Thumbs.db
+*.swp
+.*.swp
+*~
+*.out
+.idea
+.vscode
+.history
+node_modules
