@@ -2,5 +2,5 @@
 
 set -e
 
-sudo dnf install -y zsh util-linux-user
+sudo apt install -y zsh
 chsh -s $(which zsh)

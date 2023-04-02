@@ -8,7 +8,6 @@ sub_help () {
   echo "Usage: $BIN_NAME <command>"
   echo
   echo "Commands:"
-  echo "   clean            Clean up caches (brew, gem)"
   echo "   edit             Open dotfiles in IDE ($DOTFILES_IDE)"
   echo "   help             This help message"
   echo "   update           Update packages and pkg managers (OS, brew, npm)"
@@ -19,13 +18,9 @@ sub_edit () {
 }
 
 sub_update () {
-  sudo dnf upgrade
-  flatpak update
+  sudo apt update && sudo apt upgrade
+  sudo snap refresh
   npm -g update; npm install -g npm
-}
-
-sub_clean () {
-  brew cleanup
 }
 
 case $COMMAND_NAME in

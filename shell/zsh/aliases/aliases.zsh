@@ -5,6 +5,8 @@ alias rm="rm -i"
 alias cp="cp -i"
 alias mv="mv -i"
 alias vi="/usr/bin/vim"
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
 
 # Navigation
 alias dotfiles="cd $DOTFILES"
