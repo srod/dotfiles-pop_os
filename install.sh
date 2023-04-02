@@ -18,11 +18,9 @@ cd "${BASEDIR}"
 git config --global url."git@github.com:".insteadOf git://github.com/
 git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
-
-source "${BASEDIR}/setup/zsh.sh"
-source "${BASEDIR}/setup/nvm.sh"
-source "${BASEDIR}/setup/packages.sh"
-
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
 
-source "${BASEDIR}/setup/set_ssh_key.sh"
+. "${BASEDIR}/setup/zsh.sh"
+. "${BASEDIR}/setup/nvm.sh"
+. "${BASEDIR}/setup/packages.sh"
+. "${BASEDIR}/setup/set_ssh_key.sh"

@@ -19,7 +19,8 @@ sub_edit () {
 
 sub_update () {
   sudo apt update && sudo apt upgrade
-  sudo snap refresh
+  flatpak update
+  flatpak uninstall --unused
   npm -g update; npm install -g npm
 }
 

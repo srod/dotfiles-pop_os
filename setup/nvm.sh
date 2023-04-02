@@ -8,5 +8,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-nvm install 16
-npm install -g $(cat setup/npmfile)
+nvm install 18
+
+# PNPM
+
+corepack enable
+corepack prepare pnpm@latest --activate
+export PNPM_HOME=~/.local/share/pnpm
+export PATH="$PNPM_HOME:$PATH"
+mkdir -p ~/.local/share/pnpm
+pnpm add -g $(cat setup/npmfile)
