@@ -21,7 +21,7 @@ sub_update () {
   sudo apt update && sudo apt upgrade
   flatpak update
   flatpak uninstall --unused
-  npm -g update; npm install -g npm
+  pnpm -g update; pnpm install -g npm
 }
 
 case $COMMAND_NAME in
