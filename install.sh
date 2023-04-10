@@ -20,6 +20,7 @@ git -C "${DOTBOT_DIR}" submodule sync --quiet --recursive
 git submodule update --init --recursive "${DOTBOT_DIR}"
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" -c "${CONFIG}" "${@}"
 
+. "${BASEDIR}/setup/utils.sh"
 . "${BASEDIR}/setup/zsh.sh"
 . "${BASEDIR}/setup/nvm.sh"
 . "${BASEDIR}/setup/packages.sh"

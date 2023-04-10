@@ -2,7 +2,7 @@
 
 set -e
 
-echo "==> Generating an SSH key"
+ohai "Generating an SSH key"
 
 read -r -p "Email: " email
 
