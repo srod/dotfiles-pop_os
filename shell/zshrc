@@ -10,6 +10,11 @@ DOTFILES_SHELL=$DOTFILES/shell
 ZSH=$DOTFILES_SHELL/oh-my-zsh
 ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_CUSTOM=$DOTFILES_SHELL/zsh
+HOMEBREW_PREFIX=/opt/homebrew
+
+if ! hash brew 2> /dev/null; then
+  eval $(/opt/homebrew/bin/brew shellenv)
+fi
 
 # Source custom functions
 source $DOTFILES_SHELL/zsh/functions/*.zsh

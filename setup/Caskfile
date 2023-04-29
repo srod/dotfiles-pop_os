@@ -1,0 +1,35 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/cask-fonts"
+
+cask "brave-browser"
+cask "firefox"
+cask "font-fira-code"
+cask "google-chrome"
+cask "gpg-suite"
+cask "imageoptim"
+cask "iterm2"
+#cask "keybase"
+cask "keepingyouawake"
+cask "libreoffice"
+cask "libreoffice-language-pack"
+# cask "macdroid"
+cask "onyx"
+cask "plex"
+cask "rectangle"
+cask "spotify"
+cask "standard-notes"
+cask "stats"
+cask "sublime-text"
+cask "visual-studio-code"
+
+# App Store
+mas "Bitwarden", id: 1352778147
+# mas "Edison Mail", id: 1489591003
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft Powerpoint", id: 462062816
+mas "Microsoft Word", id: 462054704
+mas "OneDrive", id: 823766827
+mas "Pocket", id: 568494494
+mas "Telegram", id: 747648890

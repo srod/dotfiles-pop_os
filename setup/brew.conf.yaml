@@ -1,0 +1,10 @@
+- defaults:
+    brewfile:
+      stdout: true
+      stderr: true
+
+- brewfile:
+    file: setup/brewfile
+
+- brewfile:
+    file: setup/caskfile
