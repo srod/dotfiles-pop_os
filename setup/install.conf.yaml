@@ -4,15 +4,16 @@
       relink: true
       create: true
 
-- clean: ["~"]
+- clean: ["~", "${XDG_CONFIG_HOME}"]
 
 - shell:
+    - description: Set XDG environmental variables
+      command: source config/zsh/.zshenv
     - [git submodule update --init --recursive, Installing submodules]
 
 - link:
-    ~/.zshrc: config/zsh/zshrc
-    ~/.p10k.zsh: config/zsh/p10k.zsh
-    ~/.vimrc: config/vim/vimrc
-    ~/.vim: config/vim
+    ~/.zshenv: { path: config/zsh/.zshenv }
+    ${XDG_CONFIG_HOME}/zsh: config/zsh
+    ${XDG_CONFIG_HOME}/vim: config/vim
     ~/.gitignore: config/git/ignore
     ~/.gitconfig: config/git/config

@@ -1,5 +1,5 @@
-# zsh_dir=${XDG_CONFIG_HOME:-$HOME/.config}/zsh
-zsh_dir=$ZDOTDIR
+zsh_dir=${XDG_CONFIG_HOME:-$HOME/.config}/zsh
+# zsh_dir=$ZDOTDIR
 antigen_dir=${ADOTDIR:-$ZDOTDIR/antigen}
 antigen_git="https://raw.githubusercontent.com/zsh-users/antigen/master/bin/antigen.zsh"
 

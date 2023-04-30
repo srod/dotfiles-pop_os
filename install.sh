@@ -65,9 +65,13 @@ elif [ -f "/etc/debian_version" ]; then
 fi
 
 ohai "Installing Vim Plugins"
+export VIMINIT=":source $XDG_CONFIG_HOME/vim/vimrc"
 vim +PlugInstall +qall
 
 ohai "Installing ZSH Plugins"
 /bin/zsh -i -c "antigen update && antigen-apply"
 
 . "${BASEDIR}/setup/set_ssh_key.sh"
+
+source "${HOME}/.zshenv"
+exec zsh

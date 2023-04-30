@@ -1,5 +1,5 @@
 " Setup Vim Plugged, and load plugins
-source ~/.vim/setup-vim-plug.vim
+source ~/.config/vim/setup-vim-plug.vim
 
 filetype plugin on
 
@@ -9,7 +9,7 @@ filetype plugin on
 syntax on
 
 " Colors
-colorscheme smyck
+"colorscheme smyck
 
 " ================ Turn Off Swap Files ==============
 
