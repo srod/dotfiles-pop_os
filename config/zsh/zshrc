@@ -1,25 +1,18 @@
 export ADOTDIR="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/antigen"
-export DOTFILES=$HOME/.dotfiles
-DOTFILES_SHELL=$DOTFILES/shell
-ZSH=$DOTFILES_SHELL/oh-my-zsh
-ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_CUSTOM=$DOTFILES_SHELL/zsh
-export ZDOTDIR="${ZSH_CUSTOM}"
-HOMEBREW_PREFIX=/opt/homebrew
+export DOTFILES="${HOME}/.dotfiles"
+export ZDOTDIR="${DOTFILES}/config/zsh"
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_CONFIG_HOME="${HOME}/.config"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+# HOMEBREW_PREFIX=/opt/homebrew
 
 # MacOS-specific services
 if [ "$(uname -s)" = "Darwin" ]; then
   # Add Brew to path, if it's installed
   if [[ -d /opt/homebrew/bin ]]; then
-    # export PATH=/opt/homebrew/bin:$PATH
     eval $(/opt/homebrew/bin/brew shellenv)
   fi
 fi
-# if ! hash brew 2> /dev/null; then
-#   eval $(/opt/homebrew/bin/brew shellenv)
-# fi
 
 # Source all ZSH config files (if present)
 if [[ -d $ZDOTDIR ]]; then
@@ -29,7 +22,7 @@ if [[ -d $ZDOTDIR ]]; then
 fi
 
 # Source custom functions
-source $DOTFILES_SHELL/zsh/functions/*.zsh
+source ${ZDOTDIR}/functions/*.zsh
 
 # Plugins list
 # plugins=(zsh-completions zsh-autosuggestions zsh-better-npm-completion zsh-syntax-highlighting history-substring-search jsontools sudo urltools web-search git gpg-agent ssh-agent node npm vscode)

@@ -10,8 +10,8 @@
     - [git submodule update --init --recursive, Installing submodules]
 
 - link:
-    ~/.zshrc: shell/zshrc
-    ~/.p10k.zsh: shell/zsh/p10k.zsh
+    ~/.zshrc: config/zsh/zshrc
+    ~/.p10k.zsh: config/zsh/p10k.zsh
     ~/.vimrc: config/vim/vimrc
     ~/.vim: config/vim
     ~/.gitignore: config/git/ignore
