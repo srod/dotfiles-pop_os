@@ -61,4 +61,10 @@ elif [ -f "/etc/debian_version" ]; then
   # $debian_pkg_install_script $PARAMS
 fi
 
+ohai "Installing Vim Plugins"
+vim +PlugInstall +qall
+
+ohai "Installing ZSH Plugins"
+/bin/zsh -i -c "antigen update && antigen-apply"
+
 . "${BASEDIR}/setup/set_ssh_key.sh"

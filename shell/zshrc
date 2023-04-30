@@ -13,6 +13,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 ZSH_CUSTOM=$DOTFILES_SHELL/zsh
 export ZDOTDIR="${ZSH_CUSTOM}"
 HOMEBREW_PREFIX=/opt/homebrew
+export XDG_DATA_HOME="${HOME}/.local/share"
 
 # MacOS-specific services
 if [ "$(uname -s)" = "Darwin" ]; then
