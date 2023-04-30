@@ -10,6 +10,8 @@ else
   ohai "Installing ZSH"
   if [ "$SYSTEM_TYPE" = "Darwin" ]; then
     brew install zsh
+  elif [ -f "/etc/arch-release" ]; then
+    sudo pacman -S zsh
   elif [ -f "/etc/debian_version" ]; then
     sudo apt install -y zsh
   fi

@@ -10,7 +10,9 @@ else
 fi
 tty_mkbold() { tty_escape "1;$1"; }
 tty_blue="$(tty_mkbold 34)"
+tty_yellow="$(tty_mkbold 93)"
 tty_bold="$(tty_mkbold 39)"
+tty_light='\x1b[2m'
 tty_reset="$(tty_escape 0)"
 
 ohai() {

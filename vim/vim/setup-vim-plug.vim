@@ -2,18 +2,11 @@
 " Sets up all Vim / Neovim Plugins via Vim Plug                      "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Installs and imports Vim Plug, updates and loads listed plugins    "
-" For more info, see docs at: https://github.com/srod/dotfiles    "
-" Licensed under MIT (C) Alicia Sykes 2022 <https://aliciasykes.com> "
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Set paths for plug.vim and directory for plugins
-if has('nvim')
-  let vim_plug_location=$XDG_DATA_HOME."/nvim/autoload/plug.vim"
-  let vim_plug_plugins_dir = $XDG_DATA_HOME."/nvim/plugins"
-else
-  let vim_plug_location=$HOME.'/.vim/autoload/plug.vim'
-  let vim_plug_plugins_dir = $XDG_DATA_HOME."/vim/plugins"
-endif
+let vim_plug_location=$HOME.'/.vim/autoload/plug.vim'
+let vim_plug_plugins_dir = $XDG_DATA_HOME."/vim/plugins"
 
 " If vim-plug not present, install it now
 if !filereadable(expand(vim_plug_location))

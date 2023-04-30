@@ -2,3 +2,17 @@
 source ~/.vim/setup-vim-plug.vim
 
 filetype plugin on
+
+" ================ General Config ====================
+
+"turn on syntax highlighting
+syntax on
+
+" Colors
+colorscheme smyck
+
+" ================ Turn Off Swap Files ==============
+
+set noswapfile
+set nobackup
+set nowb

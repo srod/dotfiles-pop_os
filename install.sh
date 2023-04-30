@@ -3,11 +3,9 @@
 set -e
 
 SYSTEM_TYPE=$(uname -s) # Get system type - Linux / MacOS (Darwin)
-
 CONFIG="setup/install.conf.yaml"
 CONFIG_BREW="setup/brew.conf.yaml"
 DOTBOT_DIR="dotbot"
-
 DOTBOT_BIN="bin/dotbot"
 BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
@@ -27,6 +25,16 @@ fi
 # Verify required packages are installed
 system_verify "git" true
 system_verify "curl" true
+
+# If XDG variables arn't yet set, then configure defaults
+if [ -z ${XDG_CONFIG_HOME+x} ]; then
+  ohai "XDG_CONFIG_HOME is not yet set. Will use ~/.config"
+  export XDG_CONFIG_HOME="${HOME}/.config"
+fi
+if [ -z ${XDG_DATA_HOME+x} ]; then
+  ohai "XDG_DATA_HOME is not yet set. Will use ~/.local/share"
+  export XDG_DATA_HOME="${HOME}/.local/share"
+fi
 
 cd "${BASEDIR}"
 git config --global url."git@github.com:".insteadOf git://github.com/
@@ -48,17 +56,12 @@ if [ "$SYSTEM_TYPE" = "Darwin" ]; then
   "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" -d "${BASEDIR}" --plugin-dir dotbot-brewfile -c "${CONFIG_BREW}" "${@}"
 
   source "${BASEDIR}/setup/macos/main.sh"
-# elif [ -f "/etc/arch-release" ]; then
+elif [ -f "/etc/arch-release" ]; then
   # Arch Linux
-  # arch_pkg_install_script="${DOTFILES_DIR}/scripts/installs/arch-pacman.sh"
-  # chmod +x $arch_pkg_install_script
-  # $arch_pkg_install_script $PARAMS
+  . "${BASEDIR}/setup/arch-pacman.sh"
 elif [ -f "/etc/debian_version" ]; then
   # Debian / Ubuntu
-  . "${BASEDIR}/setup/packages-ubuntu.sh"
-  # debian_pkg_install_script="${DOTFILES_DIR}/scripts/installs/debian-apt.sh"
-  # chmod +x $debian_pkg_install_script
-  # $debian_pkg_install_script $PARAMS
+  . "${BASEDIR}/setup/debian-apt.sh"
 fi
 
 ohai "Installing Vim Plugins"
