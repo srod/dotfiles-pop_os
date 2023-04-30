@@ -12,7 +12,7 @@
 - link:
     ~/.zshrc: shell/zshrc
     ~/.p10k.zsh: shell/zsh/p10k.zsh
-    ~/.vimrc: vim/vimrc
-    ~/.vim: vim/vim
+    ~/.vimrc: config/vim/vimrc
+    ~/.vim: config/vim
     ~/.gitignore: config/git/ignore
     ~/.gitconfig: config/git/config

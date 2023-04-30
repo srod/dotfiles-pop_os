@@ -54,7 +54,3 @@ call plug#begin(vim_plug_plugins_dir)
   " Smyck theme
   Plug 'https://github.com/hukl/Smyck-Color-Scheme'
 call plug#end()
-
-"echom "Install smyck theme"
-"execute '!curl -o ' . vim_plug_plugins_dir . '/smyck.vim' .
-"\ ' https://raw.githubusercontent.com/hukl/Smyck-Color-Scheme/master/smyck.vim'
