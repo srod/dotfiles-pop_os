@@ -17,3 +17,6 @@
     ${XDG_CONFIG_HOME}/vim: config/vim
     ~/.gitignore: config/git/ignore
     ~/.gitconfig: config/git/config
+
+    # Bash utils
+    ${XDG_CONFIG_HOME}/utils: utils

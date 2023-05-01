@@ -15,6 +15,7 @@ export EDITOR="code"
 # export BROWSER="firefox"
 # export PAGER="less"
 export DOTFILES=$HOME/.dotfiles
+export DOTFILES_IDE="code"
 
 ## Respect XDG directories
 export ADOTDIR="${XDG_CACHE_HOME}/zsh/antigen"
@@ -30,7 +31,7 @@ export PIP_CONFIG_FILE="${XDG_CONFIG_HOME}/pip/pip.conf"
 export PIP_LOG_FILE="${XDG_DATA_HOME}/pip/log"
 export TMUX_PLUGIN_MANAGER_PATH="${XDG_DATA_HOME}/tmux/plugins"
 export VIMINIT=":source $XDG_CONFIG_HOME/vim/vimrc"
-export WGETRC="${XDG_CONFIG_HOME}/wget/.wgetrc"
+# export WGETRC="${XDG_CONFIG_HOME}/wget/.wgetrc"
 export XINITRC="${XDG_CONFIG_HOME}/X11/xinitrc"
 export XSERVERRC="${XDG_CONFIG_HOME}/X11/xserverrc"
 export ZDOTDIR="${XDG_CONFIG_HOME}/zsh"
@@ -42,3 +43,4 @@ export ZLIB="${ZDOTDIR}/lib"
 export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
 export PYTHONIOENCODING='UTF-8';
+# export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(code {})+abort'"
